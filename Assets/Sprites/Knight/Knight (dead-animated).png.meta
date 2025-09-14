@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9db356f9cda55304ebe7cf68fc429616
+guid: 6fa4d166b871d6b41823815b8e05ef64
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,18 +95,62 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Knight (dead-animated)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aefb7416f9412743be8f256851ad492
+      internalID: 1394718509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Knight (dead-animated)_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10e383547057f945a47e0e1ba31e4a1
+      internalID: -232918830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: edc50c9354a9152488f8c6b3e580a2df
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Knight (dead-animated)_0: 1394718509
+      Knight (dead-animated)_1: -232918830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

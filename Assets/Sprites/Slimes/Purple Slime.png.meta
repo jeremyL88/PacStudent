@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6de2966929ac734eb9b5b25746e73f7
+guid: 1f1de617902459d4bbd8d8e4476ed326
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sword (animated)_0
+      name: Purple Slime_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 136
-        width: 120
-        height: 120
+        x: 8
+        y: 152
+        width: 104
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f08af588b7e6f34dafc8942a77e81b0
-      internalID: 1314274387
+      spriteID: 68036a35cc1e0e9479b7cd5ceedb41c7
+      internalID: 223336775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_1
+      name: Purple Slime_1
       rect:
         serializedVersion: 2
         x: 128
-        y: 136
+        y: 152
         width: 120
-        height: 120
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48c72e6d6723a9343a1061cadee5568e
-      internalID: -1312464824
+      spriteID: df8af34768a4e6a4d8085eaa3c713778
+      internalID: -2065459451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_2
+      name: Purple Slime_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 136
-        width: 120
-        height: 120
+        x: 264
+        y: 152
+        width: 104
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a57a3788e43cb6547acdb28bb704dbcc
-      internalID: 1166907892
+      spriteID: c23792f8dd1895241a66ce05f4f91ad5
+      internalID: -977534317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_3
+      name: Purple Slime_3
       rect:
         serializedVersion: 2
         x: 384
-        y: 136
+        y: 152
         width: 120
-        height: 120
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bddac63f5d7b3574cb5b997d98b6660d
-      internalID: 1176775919
+      spriteID: f13c305e02addbe4ea200d74b91813c5
+      internalID: -545975938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_4
+      name: Purple Slime_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 8
-        width: 120
-        height: 120
+        x: 16
+        y: 24
+        width: 104
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36d24cf68a466a04d826791795f208b7
-      internalID: 636821967
+      spriteID: 3a3dd6cfae56a1c49939f38923981466
+      internalID: 888694050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_5
+      name: Purple Slime_5
       rect:
         serializedVersion: 2
-        x: 128
-        y: 8
+        x: 136
+        y: 24
         width: 120
-        height: 120
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed186af8c389871499a3984b5710f7e5
-      internalID: -587643814
+      spriteID: de50350b615450346a4934291641dfb8
+      internalID: -543146672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_6
+      name: Purple Slime_6
       rect:
         serializedVersion: 2
-        x: 256
+        x: 264
         y: 8
-        width: 120
-        height: 120
+        width: 104
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,8 +237,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86c74873459ae81479e2307f13a8cc6c
-      internalID: 1249937422
+      spriteID: 242f04658bfb39e4db97d90859ec6b39
+      internalID: 1950081550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple Slime_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 120
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4036cae6ea28cc348b794fe44f574078
+      internalID: 454256534
       vertices: []
       indices: 
       edges: []
@@ -246,7 +267,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b10e24f80c1158c469561d2b3d4a5182
+    spriteID: 80c11b2e15879594fbc9aa85bfda5b98
     internalID: 0
     vertices: []
     indices: 
@@ -254,13 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sword (animated)_0: 1314274387
-      Sword (animated)_1: -1312464824
-      Sword (animated)_2: 1166907892
-      Sword (animated)_3: 1176775919
-      Sword (animated)_4: 636821967
-      Sword (animated)_5: -587643814
-      Sword (animated)_6: 1249937422
+      Purple Slime_0: 223336775
+      Purple Slime_1: -2065459451
+      Purple Slime_2: -977534317
+      Purple Slime_3: -545975938
+      Purple Slime_4: 888694050
+      Purple Slime_5: -543146672
+      Purple Slime_6: 1950081550
+      Purple Slime_7: 454256534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

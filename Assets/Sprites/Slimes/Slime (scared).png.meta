@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6de2966929ac734eb9b5b25746e73f7
+guid: d29f085d049fe5b49a72fc6ed4faad13
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sword (animated)_0
+      name: Slime (scared)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 136
-        width: 120
-        height: 120
+        x: 8
+        y: 152
+        width: 104
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f08af588b7e6f34dafc8942a77e81b0
-      internalID: 1314274387
+      spriteID: d756ec7904800794d9a81b9cc31be41f
+      internalID: -1662681404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_1
+      name: Slime (scared)_1
       rect:
         serializedVersion: 2
         x: 128
-        y: 136
+        y: 152
         width: 120
-        height: 120
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48c72e6d6723a9343a1061cadee5568e
-      internalID: -1312464824
+      spriteID: 6c63fc965f84a3c47a553fc6fa6f7a35
+      internalID: 835938327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_2
+      name: Slime (scared)_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 136
-        width: 120
-        height: 120
+        x: 264
+        y: 152
+        width: 104
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a57a3788e43cb6547acdb28bb704dbcc
-      internalID: 1166907892
+      spriteID: 680e48e4e3f638f4b99d42589bde0443
+      internalID: 2011037590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_3
+      name: Slime (scared)_3
       rect:
         serializedVersion: 2
         x: 384
-        y: 136
+        y: 152
         width: 120
-        height: 120
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bddac63f5d7b3574cb5b997d98b6660d
-      internalID: 1176775919
+      spriteID: 026ac54e5e5246844bf9741b9f571bca
+      internalID: 744490824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_4
+      name: Slime (scared)_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 8
-        width: 120
-        height: 120
+        x: 16
+        y: 24
+        width: 104
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36d24cf68a466a04d826791795f208b7
-      internalID: 636821967
+      spriteID: 480a48e2036bd1d45bce8c2e844b86f7
+      internalID: 67747781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_5
+      name: Slime (scared)_5
       rect:
         serializedVersion: 2
-        x: 128
-        y: 8
+        x: 136
+        y: 24
         width: 120
-        height: 120
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed186af8c389871499a3984b5710f7e5
-      internalID: -587643814
+      spriteID: 89efea5ffc6b2974a8bfc11b6a218602
+      internalID: -449250517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword (animated)_6
+      name: Slime (scared)_6
       rect:
         serializedVersion: 2
-        x: 256
+        x: 264
         y: 8
-        width: 120
-        height: 120
+        width: 104
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,8 +237,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86c74873459ae81479e2307f13a8cc6c
-      internalID: 1249937422
+      spriteID: d3235c4da4fafbc40bb1109ac402c9ae
+      internalID: 1285117463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime (scared)_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 120
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172f88584a19dc44896c6db2d11b21ca
+      internalID: 782146724
       vertices: []
       indices: 
       edges: []
@@ -246,7 +267,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b10e24f80c1158c469561d2b3d4a5182
+    spriteID: c36db1f096a212142af6d84e50e48161
     internalID: 0
     vertices: []
     indices: 
@@ -254,13 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sword (animated)_0: 1314274387
-      Sword (animated)_1: -1312464824
-      Sword (animated)_2: 1166907892
-      Sword (animated)_3: 1176775919
-      Sword (animated)_4: 636821967
-      Sword (animated)_5: -587643814
-      Sword (animated)_6: 1249937422
+      Slime (scared)_0: -1662681404
+      Slime (scared)_1: 835938327
+      Slime (scared)_2: 2011037590
+      Slime (scared)_3: 744490824
+      Slime (scared)_4: 67747781
+      Slime (scared)_5: -449250517
+      Slime (scared)_6: 1285117463
+      Slime (scared)_7: 782146724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6fa4d166b871d6b41823815b8e05ef64
+guid: f4973522400e76e43a4bf52c57617603
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,18 +95,62 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Slime (Dead-animated)_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 152
+        width: 104
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad738bc238b0fcf458619e1d80732c79
+      internalID: -1424562320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime (Dead-animated)_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4783b0a10cf2e24992e6b19afd737d6
+      internalID: 1209637978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a826b4d8086aee14ba31233d4d91eefe
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Slime (Dead-animated)_0: -1424562320
+      Slime (Dead-animated)_1: 1209637978
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
