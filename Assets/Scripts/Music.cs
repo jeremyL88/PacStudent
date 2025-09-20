@@ -15,15 +15,8 @@ public class Music : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (!music.isPlaying)
-        //{
-        //    Debug.Log("audio no play");
-        //    music.clip = backgroundMusic;
-        //    music.Play();
-        //}
         if (!intro.isPlaying && !backgroundMusic.isPlaying)
         {
-            Debug.Log("playing music");
             backgroundMusic.Play();
         }
     }

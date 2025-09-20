@@ -14,11 +14,14 @@ public class Knight_Movement : MonoBehaviour
     private Vector3 topRight = new Vector3(21f, 20f, -0.2f);
     private Vector3 bottomRight = new Vector3(21f, 16f, -0.2f);
     private Vector3 bottomLeft = new Vector3(16f, 16f, -0.2f);
+
+    private Vector3 pastPosition;
     // Start is called before the first frame update
     void Start()
     {
         tweener = GetComponent<Tweener>();
-        
+        Application.targetFrameRate = 60;
+        pastPosition = character.transform.position;
     }
 
     // Update is called once per frame
@@ -30,28 +33,45 @@ public class Knight_Movement : MonoBehaviour
             Vector3 endPos = new Vector3(21f, 20f, -0.2f);
             float duration = 1.25f;
             tweener.AddTween(character.transform, startPos, endPos, duration);
-            animator.SetTrigger("MoveRight");
         }
         if (startPos == topRight)
         {
             Vector3 endPos = new Vector3(21f, 16f, -0.2f);
             float duration = 1f;
             tweener.AddTween(character.transform, startPos, endPos, duration);
-            animator.SetTrigger("MoveDown");
         }
         if (startPos == bottomRight)
         {
             Vector3 endPos = new Vector3(16f, 16f, -0.2f);
             float duration = 1.25f;
             tweener.AddTween(character.transform, startPos, endPos, duration);
-            animator.SetTrigger("MoveLeft");
         }
         if (startPos == bottomLeft)
         {
             Vector3 endPos = new Vector3(16f, 20f, -0.2f);
             float duration = 1f;
             tweener.AddTween(character.transform, startPos, endPos, duration);
+        }
+        
+        if (character.transform.position.x > pastPosition.x && pastPosition != character.transform.position)
+        {
+            animator.SetTrigger("MoveRight");
+            pastPosition = character.transform.position;
+        }
+        if (character.transform.position.x < pastPosition.x && pastPosition != character.transform.position)
+        {
+            animator.SetTrigger("MoveLeft");
+            pastPosition = character.transform.position;
+        }
+        if (character.transform.position.y > pastPosition.y && pastPosition != character.transform.position)
+        {
             animator.SetTrigger("MoveUp");
+            pastPosition = character.transform.position;
+        }
+        if (character.transform.position.y < pastPosition.y && pastPosition != character.transform.position)
+        {
+            animator.SetTrigger("MoveDown");
+            pastPosition = character.transform.position;
         }
     }
 }
