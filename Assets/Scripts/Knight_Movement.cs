@@ -9,7 +9,7 @@ public class Knight_Movement : MonoBehaviour
     [SerializeField]
     private Animator animator;
     private Tweener tweener;
-    public AudioSource audio;
+    public new AudioSource audio;
 
     private Vector3 topLeft = new Vector3(16f, 20f, -0.2f);
     private Vector3 topRight = new Vector3(21f, 20f, -0.2f);
