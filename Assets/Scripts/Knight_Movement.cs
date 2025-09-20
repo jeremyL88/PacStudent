@@ -9,6 +9,7 @@ public class Knight_Movement : MonoBehaviour
     [SerializeField]
     private Animator animator;
     private Tweener tweener;
+    public AudioSource audio;
 
     private Vector3 topLeft = new Vector3(16f, 20f, -0.2f);
     private Vector3 topRight = new Vector3(21f, 20f, -0.2f);
@@ -57,21 +58,32 @@ public class Knight_Movement : MonoBehaviour
         {
             animator.SetTrigger("MoveRight");
             pastPosition = character.transform.position;
+            playAudio();
         }
         if (character.transform.position.x < pastPosition.x && pastPosition != character.transform.position)
         {
             animator.SetTrigger("MoveLeft");
             pastPosition = character.transform.position;
+            playAudio();
         }
         if (character.transform.position.y > pastPosition.y && pastPosition != character.transform.position)
         {
             animator.SetTrigger("MoveUp");
             pastPosition = character.transform.position;
+            playAudio();
         }
         if (character.transform.position.y < pastPosition.y && pastPosition != character.transform.position)
         {
             animator.SetTrigger("MoveDown");
             pastPosition = character.transform.position;
+            playAudio();
+        }
+    }
+    private void playAudio()
+    {
+        if (!audio.isPlaying)
+        {
+            audio.Play();
         }
     }
 }
