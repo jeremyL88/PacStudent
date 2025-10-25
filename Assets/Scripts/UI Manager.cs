@@ -24,4 +24,8 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(0);
         
     }
+    public void Exit()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
