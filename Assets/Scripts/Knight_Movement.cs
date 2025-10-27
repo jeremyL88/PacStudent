@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Knight_Movement : MonoBehaviour
@@ -11,12 +12,8 @@ public class Knight_Movement : MonoBehaviour
     private Tweener tweener;
     public new AudioSource audio;
 
-    private Vector3 topLeft = new Vector3(16f, 20f, -0.2f);
-    private Vector3 topRight = new Vector3(21f, 20f, -0.2f);
-    private Vector3 bottomRight = new Vector3(21f, 16f, -0.2f);
-    private Vector3 bottomLeft = new Vector3(16f, 16f, -0.2f);
-
     private Vector3 pastPosition;
+    private string lastInput;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,31 +26,50 @@ public class Knight_Movement : MonoBehaviour
     void Update()
     {
         Vector3 startPos = character.transform.position;
-        if (startPos == topLeft)
-        {
-            Vector3 endPos = new Vector3(21f, 20f, -0.2f);
-            float duration = 1.25f;
-            tweener.AddTween(character.transform, startPos, endPos, duration);
-        }
-        if (startPos == topRight)
-        {
-            Vector3 endPos = new Vector3(21f, 16f, -0.2f);
-            float duration = 1f;
-            tweener.AddTween(character.transform, startPos, endPos, duration);
-        }
-        if (startPos == bottomRight)
-        {
-            Vector3 endPos = new Vector3(16f, 16f, -0.2f);
-            float duration = 1.25f;
-            tweener.AddTween(character.transform, startPos, endPos, duration);
-        }
-        if (startPos == bottomLeft)
-        {
-            Vector3 endPos = new Vector3(16f, 20f, -0.2f);
-            float duration = 1f;
-            tweener.AddTween(character.transform, startPos, endPos, duration);
-        }
+
+        Debug.Log(tweener.activeTween);
+        Left();
+        Up();
+        Down();
+        Right();
         
+        if (tweener.activeTween == null && lastInput != null)
+        {
+            if (lastInput == "a")
+            {
+                Vector3 endPos = new Vector3(character.transform.position.x - 1, character.transform.position.y , character.transform.position.z);
+                float duration = 0.5f;
+                tweener.AddTween(character.transform, startPos, endPos, duration);
+                lastInput = null;
+                Debug.Log("going left");
+            }
+            if (lastInput == "w")
+            {
+                Vector3 endPos = new Vector3(character.transform.position.x, character.transform.position.y + 1, character.transform.position.z);
+                float duration = 0.5f;
+                tweener.AddTween(character.transform, startPos, endPos, duration);
+                lastInput = null;
+                Debug.Log("going up");
+            }
+            if (lastInput == "s")
+            {
+                Vector3 endPos = new Vector3(character.transform.position.x, character.transform.position.y - 1, character.transform.position.z);
+                float duration = 0.5f;
+                tweener.AddTween(character.transform, startPos, endPos, duration);
+                lastInput = null;
+                Debug.Log("going down");
+            }
+            if (lastInput == "d")
+            {
+                Vector3 endPos = new Vector3(character.transform.position.x + 1, character.transform.position.y, character.transform.position.z);
+                float duration = 0.5f;
+                tweener.AddTween(character.transform, startPos, endPos, duration);
+                lastInput = null;
+                Debug.Log("going right");
+            }
+        }
+ 
+
         if (character.transform.position.x > pastPosition.x && pastPosition != character.transform.position)
         {
             animator.SetTrigger("MoveRight");
@@ -79,6 +95,76 @@ public class Knight_Movement : MonoBehaviour
             playAudio();
         }
     }
+
+    private void Left()
+    {
+        Vector3 startPos = character.transform.position;
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (tweener.activeTween != null)
+            {
+                lastInput = "a";
+                Debug.Log("Last input: left");
+                return;
+            }
+            Vector3 endPos = new Vector3(character.transform.position.x - 1, character.transform.position.y, character.transform.position.z);
+            float duration = 0.5f;
+            tweener.AddTween(character.transform, startPos, endPos, duration);
+            
+        }
+    }
+    private void Up()
+    {
+        Vector3 startPos = character.transform.position;
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (tweener.activeTween != null)
+            {
+                lastInput = "w";
+                Debug.Log("Last input: up");
+                return;
+            }
+            Vector3 endPos = new Vector3(character.transform.position.x, character.transform.position.y + 1, character.transform.position.z);
+            float duration = 0.5f;
+            tweener.AddTween(character.transform, startPos, endPos, duration);
+            
+        }
+    }
+    private void Down()
+    {
+        Vector3 startPos = character.transform.position;
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (tweener.activeTween != null)
+            {
+                lastInput = "s";
+                Debug.Log("Last input: down");
+                return;
+            }
+            Vector3 endPos = new Vector3(character.transform.position.x, character.transform.position.y - 1, character.transform.position.z);
+            float duration = 0.5f;
+            tweener.AddTween(character.transform, startPos, endPos, duration);
+            
+        }
+    }
+    private void Right()
+    {
+        Vector3 startPos = character.transform.position;
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (tweener.activeTween != null)
+            {
+                lastInput = "d";
+                Debug.Log("Last input: right");
+                return;
+            }
+            Vector3 endPos = new Vector3(character.transform.position.x + 1, character.transform.position.y, character.transform.position.z);
+            float duration = 0.5f;
+            tweener.AddTween(character.transform, startPos, endPos, duration);
+            
+        }
+    }
+
     private void playAudio()
     {
         if (!audio.isPlaying)
