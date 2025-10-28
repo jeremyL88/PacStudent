@@ -6109,7 +6109,7 @@ Animator:
   m_GameObject: {fileID: 779206274}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d789806602ff4b1498d11a12366f0ab5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7bb92a27d5d11f64d8da2247faecbdd0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7331,7 +7331,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989623354}
-  - component: {fileID: 989623355}
   - component: {fileID: 989623356}
   m_Layer: 5
   m_Name: Tweener
@@ -7359,21 +7358,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &989623355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989623353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64afa8494c6281548a0799e1ddafbfcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 779206274}
-  animator: {fileID: 779206276}
-  audio: {fileID: 0}
 --- !u!114 &989623356
 MonoBehaviour:
   m_ObjectHideFlags: 0

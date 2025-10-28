@@ -32,166 +32,76 @@ public class Knight_Movement : MonoBehaviour
         
 
         //Debug.Log(tweener.activeTween);
-        Left();
-        Up();
-        Down();
-        Right();
+        Inputs();
         
         if (tweener.activeTween == null && lastInput != null)
         {
-            if (currentInput == "a" && tweener.activeTween == null)
-            {
-                Vector3 endPos = new Vector3(character.transform.position.x - 1, character.transform.position.y , character.transform.position.z);
-                if (IsWall(endPos))
-                {
-                    //lastInput = null;
-                    return;
-                }
-                currentInput = lastInput;
-                float duration = 0.2f;
-                tweener.AddTween(character.transform, startPos, endPos, duration);
-                //lastInput = null;
-            }
-            if (currentInput == "w" && tweener.activeTween == null)
-            {
-                Vector3 endPos = new Vector3(character.transform.position.x, character.transform.position.y + 1, character.transform.position.z);
-                if (IsWall(endPos))
-                {
-                    //lastInput = null;
-                    return;
-                }
-                currentInput = lastInput;
-                float duration = 0.2f;
-                tweener.AddTween(character.transform, startPos, endPos, duration);
-                //lastInput = null;
-            }
-            if (currentInput == "s" && tweener.activeTween == null)
-            {
-                Vector3 endPos = new Vector3(character.transform.position.x, character.transform.position.y - 1, character.transform.position.z);
-                if (IsWall(endPos))
-                {
-                    //lastInput = null;
-                    return;
-                }
-                currentInput = lastInput;
-                float duration = 0.2f;
-                tweener.AddTween(character.transform, startPos, endPos, duration);
-                //lastInput = null;
-            }
-            if (currentInput == "d" && tweener.activeTween == null)
-            {
-                Vector3 endPos = new Vector3(character.transform.position.x + 1, character.transform.position.y, character.transform.position.z);
-                if (IsWall(endPos))
-                {
-                    //lastInput = null;
-                    Debug.Log("hit a wall");
-                    return;
-                }
-                currentInput = lastInput;
-                Debug.Log("going right");
-                float duration = 0.2f;
-                tweener.AddTween(character.transform, startPos, endPos, duration);
-                //lastInput = null;
-            }
-        }
 
-        animation();
+                Vector3 endPos = inputDirection(startPos, lastInput);
+
+                if (!IsWall(endPos))
+                {
+                    currentInput = lastInput;
+                    //Debug.Log("moving");
+                    float duration = 0.2f;
+                    tweener.AddTween(character.transform, startPos, endPos, duration);
+                    return;
+                }
+                
+        }
+        if (tweener.activeTween == null && currentInput != null)
+            {
+                Vector3 endPos = inputDirection(startPos, currentInput);
+                if (!IsWall(endPos) )
+                {
+                    float duration = 0.2f;
+                    tweener.AddTween(character.transform, startPos, endPos, duration);
+                }
+            }
+        playAnimation();
     }
 
-    private void Left()
+    private void Inputs()
     {
-        Vector3 startPos = character.transform.position;
         if (Input.GetKey(KeyCode.A))
         {
-            if (tweener.activeTween != null)
-            {
-                lastInput = "a";
-                Debug.Log("Last input: left");
-                return;
-            }
-            Vector3 endPos = new Vector3(startPos.x - 1, startPos.y, startPos.z);
-            if (IsWall(endPos))
-            {
-                lastInput = "a";
-                return;
-            }
-            currentInput = "a";
-            float duration = 0.2f;
-            tweener.AddTween(character.transform, startPos, endPos, duration);
-
-            
+            lastInput = "a";
         }
-    }
-    private void Up()
-    {
-        Vector3 startPos = character.transform.position;
         if (Input.GetKey(KeyCode.W))
         {
-            if (tweener.activeTween != null)
-            {
-                lastInput = "w";
-                Debug.Log("Last input: up");
-                return;
-            }
-            Vector3 endPos = new Vector3(startPos.x, startPos.y + 1, startPos.z);
-            if (IsWall(endPos))
-            {
-                lastInput = "w";
-                return;
-            }
-            currentInput = "w";
-            float duration = 0.2f;
-            tweener.AddTween(character.transform, startPos, endPos, duration);
-            
+            lastInput = "w";
         }
-    }
-    private void Down()
-    {
-        Vector3 startPos = character.transform.position;
         if (Input.GetKey(KeyCode.S))
         {
-            if (tweener.activeTween != null)
-            {
-                lastInput = "s";
-                Debug.Log("Last input: down");
-                return;
-            }
-            Vector3 endPos = new Vector3(startPos.x, startPos.y - 1, startPos.z);
-            if (IsWall(endPos))
-            {
-                lastInput = "s";
-                return;
-            }
-            currentInput = "s";
-            float duration = 0.2f;
-            tweener.AddTween(character.transform, startPos, endPos, duration);
-            
+            lastInput = "s";
         }
-    }
-    private void Right()
-    {
-        Vector3 startPos = character.transform.position;
         if (Input.GetKey(KeyCode.D))
         {
-            if (tweener.activeTween != null)
-            {
-                lastInput = "d";
-                Debug.Log("Last input: right");
-                return;
-            }
-            Vector3 endPos = new Vector3(startPos.x + 1, startPos.y, startPos.z);
-            if (IsWall(endPos))
-            {
-                lastInput = "d";
-                Debug.Log("wall in the way");
-                return;
-            }
-            currentInput = "d";
-            float duration = 0.2f;
-            tweener.AddTween(character.transform, startPos, endPos, duration);
-            
+            lastInput = "d";
         }
     }
+
+    private Vector3 inputDirection(Vector3 startPos, string input)
+    {
+        if (input == "a") //left
+        {
+            return startPos + Vector3.left;
+        }
+        if (input == "w") //up
+        {
+            return startPos + Vector3.up;
+        }
+        if (input == "s") //down
+        {
+            return startPos + Vector3.down;
+        }
+        if (input == "d") //right
+        {
+            return startPos + Vector3.right;
+        }
+        return startPos;
+    }
+
     private bool IsWall(Vector3 endPos)
     {
         GameObject[] allWalls = GameObject.FindGameObjectsWithTag("Wall");
@@ -205,7 +115,7 @@ public class Knight_Movement : MonoBehaviour
         return false;
     }
 
-    private void animation()
+    private void playAnimation()
     {
         if (character.transform.position.x > pastPosition.x && pastPosition != character.transform.position)
         {
