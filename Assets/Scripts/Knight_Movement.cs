@@ -39,7 +39,7 @@ public class Knight_Movement : MonoBehaviour
 
                 Vector3 endPos = inputDirection(startPos, lastInput);
 
-                if (!IsWall(endPos))
+                if (!IsWall(endPos) && !IsGhostWall(endPos))
                 {
                     currentInput = lastInput;
                     //Debug.Log("moving");
@@ -52,7 +52,7 @@ public class Knight_Movement : MonoBehaviour
         if (tweener.activeTween == null && currentInput != null)
             {
                 Vector3 endPos = inputDirection(startPos, currentInput);
-                if (!IsWall(endPos) )
+                if (!IsWall(endPos) && !IsGhostWall(endPos))
                 {
                     float duration = 0.2f;
                     tweener.AddTween(character.transform, startPos, endPos, duration);
@@ -105,6 +105,18 @@ public class Knight_Movement : MonoBehaviour
     private bool IsWall(Vector3 endPos)
     {
         GameObject[] allWalls = GameObject.FindGameObjectsWithTag("Wall");
+        foreach (GameObject wall in allWalls)
+        {
+            if (endPos.x == wall.transform.position.x && endPos.y == wall.transform.position.y)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    private bool IsGhostWall (Vector3 endPos)
+    {
+        GameObject[] allWalls = GameObject.FindGameObjectsWithTag("GhostWall");
         foreach (GameObject wall in allWalls)
         {
             if (endPos.x == wall.transform.position.x && endPos.y == wall.transform.position.y)
