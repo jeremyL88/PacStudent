@@ -10,8 +10,9 @@ public class Knight_Movement : MonoBehaviour
     [SerializeField]
     private Animator animator;
     private Tweener tweener;
-    public new AudioSource footsteps;
-    public new AudioSource coin;
+    public AudioSource footsteps;
+    public AudioSource coin;
+    public new ParticleSystem particleSystem;
 
     private Vector3 pastPosition;
     private string lastInput;
@@ -173,11 +174,13 @@ public class Knight_Movement : MonoBehaviour
             animator.enabled = true;
             animator.SetTrigger("MoveDown");
             pastPosition = character.transform.position;
+            
             playAudio();
         }
         if (tweener.activeTween == null)
         {
             animator.enabled = false;
+            particleSystem.Stop();
         }
     }
     private void playAudio()
@@ -185,6 +188,7 @@ public class Knight_Movement : MonoBehaviour
         if (!footsteps.isPlaying)
         {
             footsteps.Play();
+            particleSystem.Play();
         }
         
     }
