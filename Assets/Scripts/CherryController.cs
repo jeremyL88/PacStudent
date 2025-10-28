@@ -10,7 +10,7 @@ public class CherryController : MonoBehaviour
     private GameObject gem;
     private float timer = 0;
     private GameObject spawnedGem;
-    private float duration = 10f;
+    private float duration = 8f;
     private float moveTime = 0f;
 
     private Vector3 startPos = Vector3.zero;
@@ -25,14 +25,14 @@ public class CherryController : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        Debug.Log((int)timer);
+        //Debug.Log((int)timer);
 
         if (spawnedGem == null)
         {
             if (timer >= 5)
             {
                 CherrySpawn();
-                Debug.Log("Cherry spawned");
+                //Debug.Log("Cherry spawned");
             }
         }
         if (spawnedGem != null)
@@ -48,7 +48,7 @@ public class CherryController : MonoBehaviour
                 spawnedGem = null;
                 timer = 0;
                 time = 0;
-                Debug.Log("Cherry destroyed");
+                //Debug.Log("Cherry destroyed");
             }
         }
 
@@ -60,7 +60,7 @@ public class CherryController : MonoBehaviour
         //middle of the level is (26.5, 7)
         if (side == 0) //to left
         {
-            Debug.Log("left side");
+            //Debug.Log("left side");
             startPos = new Vector3(11, Random.Range(-9, 24), -0.1f);
             float originDiff = startPos.y - 7f;
             float oppositeStart = 7f - originDiff;
@@ -68,7 +68,7 @@ public class CherryController : MonoBehaviour
         }
         if (side == 1) //to right
         {
-            Debug.Log("right side");
+            //Debug.Log("right side");
             startPos = new Vector3(42, Random.Range(-9, 24), -0.1f);
             float originDiff = startPos.y - 7f;
             float oppositeStart = 7f - originDiff;
@@ -76,7 +76,7 @@ public class CherryController : MonoBehaviour
         }
         if (side == 2) //to top
         {
-            Debug.Log("top side");
+            //Debug.Log("top side");
             startPos = new Vector3(Random.Range(11, 43), 23, -0.1f);
             float originDiff = startPos.x - 26.5f;
             float oppositeStart = 26.5f - originDiff;
@@ -84,7 +84,7 @@ public class CherryController : MonoBehaviour
         }
         if (side == 3) //to bottom
         {
-            Debug.Log("bottom side");
+            //Debug.Log("bottom side");
             startPos = new Vector3(Random.Range(11, 43), -9, -0.1f);
             float originDiff = startPos.x - 26.5f;
             float oppositeStart = 26.5f - originDiff;
