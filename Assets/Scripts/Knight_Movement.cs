@@ -139,7 +139,7 @@ public class Knight_Movement : MonoBehaviour
 
             if (distance <= 0.15)
             {
-                Debug.Log("coin");
+                //Debug.Log("coin");
                 return true;
             }
         }
