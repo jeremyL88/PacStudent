@@ -23,7 +23,7 @@ public class Start_knight : MonoBehaviour
     private void MousePosition()
     {
         Vector3 mousePos = Input.mousePosition;
-        Debug.Log(mousePos.x);
+        //Debug.Log(mousePos.x);
 
         //if (mousePos.x > 670 && mousePos.x < 830)
         if (mousePos.x > knight.transform.position.x - 40 && mousePos.x < knight.transform.position.x + 40)
